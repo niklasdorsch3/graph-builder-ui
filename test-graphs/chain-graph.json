@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "nodes": [
+    { "id": "1", "label": "Start" },
+    { "id": "2", "label": "Step Two" },
+    { "id": "3", "label": "Step Three" },
+    { "id": "4", "label": "Step Four" },
+    { "id": "5", "label": "Step Five" },
+    { "id": "6", "label": "Step Six" },
+    { "id": "7", "label": "Step Seven" },
+    { "id": "8", "label": "Step Eight" },
+    { "id": "9", "label": "Step Nine" },
+    { "id": "10", "label": "End" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "1", "target": "2" },
+    { "id": "e2", "source": "2", "target": "3" },
+    { "id": "e3", "source": "3", "target": "4" },
+    { "id": "e4", "source": "4", "target": "5" },
+    { "id": "e5", "source": "5", "target": "6" },
+    { "id": "e6", "source": "6", "target": "7" },
+    { "id": "e7", "source": "7", "target": "8" },
+    { "id": "e8", "source": "8", "target": "9" },
+    { "id": "e9", "source": "9", "target": "10" }
+  ]
+}

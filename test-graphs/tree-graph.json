@@ -1,0 +1,119 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "metadata": {
+    "description": "Tree structure with 3 hub nodes, each with 3 children"
+  },
+  "nodes": [
+    {
+      "id": "hub1",
+      "label": "Hub 1"
+    },
+    {
+      "id": "hub2",
+      "label": "Hub 2"
+    },
+    {
+      "id": "hub3",
+      "label": "Hub 3"
+    },
+    {
+      "id": "child1a",
+      "label": "Child 1A"
+    },
+    {
+      "id": "child1b",
+      "label": "Child 1B"
+    },
+    {
+      "id": "child1c",
+      "label": "Child 1C"
+    },
+    {
+      "id": "child2a",
+      "label": "Child 2A"
+    },
+    {
+      "id": "child2b",
+      "label": "Child 2B"
+    },
+    {
+      "id": "child2c",
+      "label": "Child 2C"
+    },
+    {
+      "id": "child3a",
+      "label": "Child 3A"
+    },
+    {
+      "id": "child3b",
+      "label": "Child 3B"
+    },
+    {
+      "id": "child3c",
+      "label": "Child 3C"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1aa",
+      "source": "hub1",
+      "target": "hub2"
+    },
+        {
+      "id": "e1bb",
+      "source": "hub1",
+      "target": "hub3"
+    },
+        {
+      "id": "e1vv",
+      "source": "hub2",
+      "target": "hub3"
+    },
+        {
+      "id": "e1",
+      "source": "hub1",
+      "target": "child1a"
+    },
+    {
+      "id": "e2",
+      "source": "hub1",
+      "target": "child1b"
+    },
+    {
+      "id": "e3",
+      "source": "hub1",
+      "target": "child1c"
+    },
+    {
+      "id": "e4",
+      "source": "hub2",
+      "target": "child2a"
+    },
+    {
+      "id": "e5",
+      "source": "hub2",
+      "target": "child2b"
+    },
+    {
+      "id": "e6",
+      "source": "hub2",
+      "target": "child2c"
+    },
+    {
+      "id": "e7",
+      "source": "hub3",
+      "target": "child3a"
+    },
+    {
+      "id": "e8",
+      "source": "hub3",
+      "target": "child3b"
+    },
+    {
+      "id": "e9",
+      "source": "hub3",
+      "target": "child3c"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "nodes": [
+    {
+      "id": "A",
+      "label": "User Authentication System"
+    },
+    {
+      "id": "B",
+      "label": "Database Layer"
+    },
+    {
+      "id": "C",
+      "label": "API Gateway"
+    },
+    {
+      "id": "D",
+      "label": "Core Application Logic"
+    },
+    {
+      "id": "E",
+      "label": "External Payment Service"
+    },
+    {
+      "id": "F",
+      "label": "Third Party Analytics"
+    },
+    {
+      "id": "G",
+      "label": "Logging Service"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "id": "e2",
+      "source": "B",
+      "target": "C"
+    },
+    {
+      "id": "e3",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "id": "e4",
+      "source": "D",
+      "target": "A"
+    },
+    {
+      "id": "e5",
+      "source": "D",
+      "target": "C"
+    },
+    {
+      "id": "e6",
+      "source": "D",
+      "target": "E"
+    },
+    {
+      "id": "e7",
+      "source": "E",
+      "target": "F"
+    },
+    {
+      "id": "e8",
+      "source": "D",
+      "target": "G"
+    }
+  ]
+}

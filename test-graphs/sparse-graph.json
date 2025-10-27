@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "nodes": [
+    { "id": "A", "label": "Node A" },
+    { "id": "B", "label": "Node B" },
+    { "id": "C", "label": "Node C" },
+    { "id": "D", "label": "Node D" },
+    { "id": "E", "label": "Node E" },
+    { "id": "F", "label": "Node F" },
+    { "id": "G", "label": "Node G" },
+    { "id": "H", "label": "Node H" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "A", "target": "B" },
+    { "id": "e2", "source": "E", "target": "F" }
+  ]
+}

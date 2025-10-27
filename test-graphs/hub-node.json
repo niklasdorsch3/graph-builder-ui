@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "nodes": [
+    { "id": "HUB", "label": "Central Hub" },
+    { "id": "S1", "label": "Satellite 1" },
+    { "id": "S2", "label": "Satellite 2" },
+    { "id": "S3", "label": "Satellite 3" },
+    { "id": "S4", "label": "Satellite 4" },
+    { "id": "S5", "label": "Satellite 5" },
+    { "id": "S6", "label": "Satellite 6" },
+    { "id": "S7", "label": "Satellite 7" },
+    { "id": "S8", "label": "Satellite 8" },
+    { "id": "S9", "label": "Satellite 9" },
+    { "id": "S10", "label": "Satellite 10" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "HUB", "target": "S1" },
+    { "id": "e2", "source": "HUB", "target": "S2" },
+    { "id": "e3", "source": "HUB", "target": "S3" },
+    { "id": "e4", "source": "HUB", "target": "S4" },
+    { "id": "e5", "source": "HUB", "target": "S5" },
+    { "id": "e6", "source": "HUB", "target": "S6" },
+    { "id": "e7", "source": "HUB", "target": "S7" },
+    { "id": "e8", "source": "HUB", "target": "S8" },
+    { "id": "e9", "source": "HUB", "target": "S9" },
+    { "id": "e10", "source": "HUB", "target": "S10" }
+  ]
+}

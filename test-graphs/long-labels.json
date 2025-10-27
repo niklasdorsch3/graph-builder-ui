@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "nodes": [
+    { "id": "A", "label": "Advanced Machine Learning Pipeline Orchestration" },
+    { "id": "B", "label": "Real-Time Data Stream Processing Service" },
+    { "id": "C", "label": "Distributed Microservices Architecture Gateway" },
+    { "id": "D", "label": "High Availability Database Cluster Manager" },
+    { "id": "E", "label": "Authentication and Authorization Service Provider" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "A", "target": "B" },
+    { "id": "e2", "source": "B", "target": "C" },
+    { "id": "e3", "source": "C", "target": "D" },
+    { "id": "e4", "source": "D", "target": "E" },
+    { "id": "e5", "source": "A", "target": "D" }
+  ]
+}

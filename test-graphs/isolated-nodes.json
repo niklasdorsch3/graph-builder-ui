@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "type": "directed",
+  "metadata": {
+    "description": "Graph with connected nodes and isolated nodes"
+  },
+  "nodes": [
+    {
+      "id": "hub1",
+      "label": "Hub 1"
+    },
+    {
+      "id": "hub2",
+      "label": "Hub 2"
+    },
+    {
+      "id": "child1",
+      "label": "Child 1"
+    },
+    {
+      "id": "child2",
+      "label": "Child 2"
+    },
+    {
+      "id": "child3",
+      "label": "Child 3"
+    },
+    {
+      "id": "isolated1",
+      "label": "Isolated 1"
+    },
+    {
+      "id": "isolated2",
+      "label": "Isolated 2"
+    },
+    {
+      "id": "isolated3",
+      "label": "Isolated 3"
+    },
+    {
+      "id": "isolated4",
+      "label": "Isolated 4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "hub1",
+      "target": "child1"
+    },
+    {
+      "id": "e2",
+      "source": "hub1",
+      "target": "child2"
+    },
+    {
+      "id": "e3",
+      "source": "hub2",
+      "target": "child3"
+    },
+    {
+      "id": "e4",
+      "source": "hub1",
+      "target": "hub2"
+    }
+  ]
+}
