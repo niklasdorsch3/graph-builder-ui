@@ -1,0 +1,22 @@
+# Development files
+src/
+test-graphs/
+demo-dist/
+node_modules/
+.git/
+
+# Demo and development
+demo.jsx
+src/demo.jsx
+index.html
+vite.config.js
+
+# Documentation
+*.md
+!README.md
+
+# Config files
+.gitignore
+.eslintrc
+.prettierrc
+tsconfig.json
