@@ -153,6 +153,56 @@ Check out the [live demo](https://niklasdorsch3.github.io/graph-builder-ui) to s
 - Algorithm toggles to see each optimization in action
 - Interactive node addition to test animations
 
+## Potential Improvements
+
+Ideas worth revisiting. Ordered roughly by effort and impact.
+
+### Image nodes (small — ~1 file)
+
+Add an optional `image` field to node data. The library renders it as a circular SVG `<image>` + `<clipPath>`, falling back to the existing ellipse+label when absent. No API surface change — just richer data.
+
+```json
+{ "id": "alice", "label": "Alice", "image": "https://github.com/alice.png" }
+```
+
+This unlocks org charts with avatars, dependency graphs with package logos, social graphs with profile photos — all without touching the props API.
+
+### Custom node renderer prop (medium — 3-4 files)
+
+A `renderNode` prop for full visual control:
+
+```jsx
+<GraphBuilder
+  graph={myGraph}
+  renderNode={(node, meta) => (
+    // meta includes: isHub, isHovered, isDimmed, nodeSize
+    <circle r={meta.nodeSize.rx} fill={node.color} />
+  )}
+  defaultNodeSize={{ rx: 30, ry: 30 }}
+/>
+```
+
+Since the library auto-classifies nodes (hub, child, isolated), passing those computed values through `meta` is more powerful than the `nodeTypes` registry pattern used by editor-oriented libraries like React Flow — consumers get the layout intelligence for free.
+
+Requires `defaultNodeSize` prop or per-node `size` field so the layout engine knows dimensions before rendering.
+
+### nodeSize as first-class layout data (small — good hygiene)
+
+Currently node dimensions are computed in `Node.jsx` from label text length and also recomputed in `collision.js`. They're consistent but neither feeds the other. Surfacing `nodeSize` as a property on each positioned node (set in `layout.js`) would make the layout engine size-aware and enable the above two features cleanly.
+
+### Theming / dark mode (small-medium)
+
+A `theme` prop with built-in presets (`light`, `dark`, `neon`). Dark canvas + glowing edges looks great in GIF demos. Minimal change: pass color config through the render tree instead of hardcoding hex values in `Node.jsx` and `Edge.jsx`.
+
+### More layout algorithms (medium-large)
+
+Current layout is hub-and-spoke circular. Other useful shapes:
+- **Tree/hierarchical** — for DAGs, dependency trees, org charts
+- **Force-directed physics** — let nodes settle naturally rather than snapping to rings
+- **Grid** — for structured/tabular graphs
+
+These would each live in `src/utils/` alongside the existing algorithms and be selectable via `algorithmOptions.layout`.
+
 ## License
 
 MIT © Niklas Dorsch
